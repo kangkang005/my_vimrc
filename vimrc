@@ -589,11 +589,20 @@ call plug#begin()
 
     " Completion
     " if report: The ycmd server SHUT DOWN (restart with ':YcmRestartServer') , Type ':YcmToggleLogs xxx.log'
-    Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
+    " Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
     " @YouCompleteMe {{{
-        let g:ycm_min_num_identifier_candidate_chars = 2
-        let g:ycm_show_diagnostics_ui = 1
+        " let g:ycm_min_num_identifier_candidate_chars = 2
+        " let g:ycm_show_diagnostics_ui = 1
     " @YouCompleteMe }}}
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " @coc {{{
+        " Extensions: https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
+        let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-marketplace']
+        " Install coc marketplace
+        " :CocList marketplace
+        " Search coc plugin
+        " :CocList marketplace python
+    " @coc }}}
 
     " theme
     Plug 'altercation/vim-colors-solarized'
